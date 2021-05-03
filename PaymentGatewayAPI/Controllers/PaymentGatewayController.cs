@@ -56,7 +56,7 @@ namespace PaymentGateway.Controllers
         /// <param name="currency"></param>
         /// <param name="cvv"></param>
         /// <returns></returns>
-        [HttpGet]
+        [HttpPost]
         public GatewayPaymentResult ProcessPayment(string cardNumber, DateTime expiryMonth, double amount, string currency, string cvv)
         {
             BankPaymentResult bankRes = _bank.ProcessPayment(cardNumber, expiryMonth, amount, currency, cvv);
